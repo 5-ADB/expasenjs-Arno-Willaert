@@ -38,20 +38,17 @@ document.querySelector("#registreer").addEventListener("click", () =>{
     email: email.value,
     password: password.value,
   }
-  if(naam == none || email== none || password == none){
-    console.log("er mist een element");
-  }
   users.push(nieuweGebruiker)
   console.log(users);
   
 })
 
 
-
-//htlm elementen filter
-const filter = document.querySelector("#filter")
-document.querySelector("#filterBtn").addEventListener("click",()=>{
-  if (filter.value< 4){
-    alert("minimum 4 letters aub")
-  }
+document.querySelector("#filterbtn").addEventListener("click",() =>{
+  element.innerHTML = ''
+  lijst.forEach(nieuweGebruiker => {
+    const nieuweNaam = document.createElement("div")
+    nieuweNaam.innerHTML = `${nieuweGebruiker.fullname} - [${nieuweGebruiker.email}]`
+    element.appendchild(nieuweNaam)
+  });
 })
